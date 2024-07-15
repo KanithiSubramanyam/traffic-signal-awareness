@@ -1,6 +1,8 @@
 function toggleSignal(activeSignal) {
     ['red', 'yellow', 'green'].forEach(signal => {
         document.getElementById(`${signal}-signal`).classList.toggle('d-none', signal !== activeSignal);
+        document.getElementById(`${signal}-signal-button`).classList.toggle('active', signal == activeSignal);
+
     });
 }
 

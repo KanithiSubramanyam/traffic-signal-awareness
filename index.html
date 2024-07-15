@@ -30,24 +30,41 @@
     />
   </head>
 
-  <body class="bg-light-grey">
+  <body class=" background">
     <div class="m-0 p-0">
       <div class="container-fluid">
         <div class="title text-center mt-5">
-          <h1 class="">Traffic Signals Awareness</h1>
+          <h1 class="" id="traffic-title">Traffic Signals Awareness</h1>
         </div>
+        <div class="container text-center">
+        <div class="row traffic-div ">
 
-        <div class="traffic-buttons">
-          <div
-            class="buttons d-flex flex-column justify-content-center align-items-center "
-          >
-            <button class="btn btn-outline-danger rounded-pill red" id="red-signal-button">
-              Red Signal
-            </button>
-            <button class="btn btn-outline-warning rounded-pill" id="yellow-signal-button">Yellow Signal</button>
-            <button class="btn btn-outline-success rounded-pill" id="green-signal-button">Green Signal</button>
+          <div class="col-lg-6 mt-lg-1">
+            <img src="assests/all-bg.jpg" class="" alt="traffic-light" id="all" />
+            <img src="assests/red-bg.jpg" class="d-none" alt="traffic-light"  id="red-light"/>
+            <img src="assests/yellow-bg.jpg" class="d-none" alt="traffic-light" id="yellow-light" />
+            <img src="assests/green-bg.jpg" class="d-none" alt="traffic-light" id="green-light"/>
           </div>
+
+
+          <div class="traffic-buttons col-lg-6 d-flex flex-column justify-content-center ">
+            <div>
+              <button class="btn btn-outline-danger rounded-pill w-50 mb-2 mb-lg-5 shadow-lg" id="red-signal-button">
+                Red Signal
+              </button>
+              <button class="btn btn-outline-warning rounded-pill w-50 mb-2 mt-lg-4 mb-lg-5 shadow-lg" id="yellow-signal-button">
+                Yellow Signal
+              </button>
+              <button class="btn btn-outline-success rounded-pill w-50 mt-lg-3 shadow-lg" id="green-signal-button">
+                Green Signal
+              </button>
+            </div>
+             
+            </div>
         </div>
+        </div>
+        
+
 
         <div class="display-cards d-none" id="red-signal">
             <div class="signal-cards m-md-5 my-2 text-center">
@@ -151,7 +168,7 @@
           <div class="dos-donts-cards m-md-5">
             <div class="row">
               <div class="col-lg-6 my-2 ">
-                <div class="card shadow-lg">
+                <div class="card shadow-lg rounded-5">
                   <div class="card-body">
                     <h5
                       class="card-title text-center text-success mt-md-2 mb-md-4 fs-md-4 fw-bold"
@@ -201,7 +218,7 @@
                 </div>
               </div>
               <div class="col-lg-6 my-2 ">
-                <div class="card shadow-lg">
+                <div class="card shadow-lg rounded-5">
                   <div class="card-body">
                     <h5
                       class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold"
@@ -356,7 +373,7 @@
           <div class="dos-donts-cards m-md-5">
             <div class="row">
               <div class="col-lg-6 my-2">
-                <div class="card shadow-lg">
+                <div class="card shadow-lg rounded-5">
                   <div class="card-body">
                     <h5
                       class="card-title text-center text-success mt-md-2 mb-md-4 fs-md-4 fw-bold"
@@ -406,7 +423,7 @@
                 </div>
               </div>
               <div class="col-lg-6 my-2">
-                <div class="card shadow-lg">
+                <div class="card shadow-lg rounded-5">
                   <div class="card-body">
                     <h5
                       class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold"
@@ -425,8 +442,7 @@
                         >Don't Panic Brake:
                       </span>
                       If you're far from the intersection when the yellow light
-                      comes on, don't slam on the brakes suddenly. Instead, slow
-                      down gradually and stop if you can do so safely.
+                      comes on, don't slam on the brakes suddenly.
                     </p>
                     <p class="card-text content px-md-3">
                       <i class="fa-regular fa-circle-check"></i>
@@ -435,7 +451,7 @@
                       >
                       If you're approaching the intersection and the light turns
                       yellow, don't enter the intersection unless you're
-                      confident you can clear it safely.
+                      confident.
                     </p>
                     <p class="card-text content px-md-3">
                       <i class="fa-regular fa-circle-check"></i>
@@ -552,7 +568,7 @@
             <div class="dos-donts-cards m-md-5">
               <div class="row">
                 <div class="col-lg-6 my-2">
-                  <div class="card shadow-lg">
+                  <div class="card shadow-lg rounded-5">
                     <div class="card-body">
                       <h5
                         class="card-title text-center text-success mt-md-2 mb-md-4 fs-md-4 fw-bold"
@@ -597,7 +613,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6 my-2">
-                  <div class="card shadow-lg">
+                  <div class="card shadow-lg rounded-5">
                     <div class="card-body">
                       <h5
                         class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold"
@@ -629,7 +645,7 @@
                         <span class="text-muted fw-bolder"
                           >Don't Run Yellow Lights:
                         </span>
-                        If the light is turning yellow as you approach the intersection, do not attempt to accelerate and cross before it turns red. Instead, prepare to stop safely if you can do so.
+                        If the light is turning yellow as you approach the intersection, do not attempt to accelerate and cross before it turns red.
                       </p>
                       <p class="card-text content px-md-3">
                         <i class="fa-regular fa-circle-check"></i>

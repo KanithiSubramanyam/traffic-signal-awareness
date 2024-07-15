@@ -20,6 +20,8 @@
 .card-data{
     text-align: justify;
 }
+
+
 @media(max-width:992px){
     .main-card{
         margin: 0px;

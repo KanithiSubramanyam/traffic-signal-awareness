@@ -41,16 +41,17 @@
           <div
             class="buttons d-flex flex-column justify-content-center align-items-center"
           >
-            <button>Red Signal</button>
+            <button class="red-signal-button">
+              Red Signal
+            </button>
             <button>Orange Signal</button>
             <button>Green Signal</button>
           </div>
         </div>
 
-        <div class="display-cards">
-
-          <div class="signal-cards m-md-5 text-center">
-            <div class="card ">
+        <div class="display-cards d-none" id="red-signal">
+          <div class="signal-cards m-md-5 my-2 text-center">
+            <div class="card main-card">
               <div
                 id="carouselExampleCaptions"
                 class="carousel slide carousel-fade"
@@ -106,90 +107,543 @@
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <h5 class="card-title fw-bold fs-3 text-danger my-md-2">
+                  Red Signal in Traffic
+                </h5>
+                <p
+                  class="card-text card-data px-md-3 text-secondary fw-bolder fs-5"
+                >
+                  A red signal in traffic lights indicates that vehicles and
+                  pedestrians must come to a complete stop. Here's how it is
+                  used and what it signifies:
+                </p>
+                <br />
+                <p class="card-text card-data px-md-3">
+                  <i class="fa-solid fa-forward"></i
+                  ><span class="text-muted fw-bolder"> Stop Sign: </span>
+                  The red signal acts as a universal stop sign at intersections.
+                  When the light turns red, it means you must stop your vehicle
+                  completely behind the stop line or before entering the
+                  intersection if there is no stop line.
+                </p>
+                <p class="card-text card-data px-md-3">
+                  <i class="fa-solid fa-forward"></i
+                  ><span class="text-muted fw-bolder"> Traffic Control: </span>
+                  Red lights are part of traffic control systems that regulate
+                  the flow of vehicles and pedestrians at intersections. They
+                  typically alternate with green lights to manage the movement
+                  of traffic from different directions.
+                </p>
+                <p class="card-text card-data px-md-3">
+                  <i class="fa-solid fa-forward"></i
+                  ><span class="text-muted fw-bolder">
+                    Pedestrian Safety::
+                  </span>
+                  Red lights also provide pedestrians with designated times to
+                  cross intersections safely without the threat of oncoming
+                  traffic.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="dos-donts-cards m-md-5" id="dos-donts-red">
+          <div class="dos-donts-cards m-md-5">
             <div class="row">
               <div class="col-lg-6 my-2">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title text-center text-primary mt-md-2 mb-md-4 fs-md-4 fw-bold">
+                    <h5
+                      class="card-title text-center text-success mt-md-2 mb-md-4 fs-md-4 fw-bold"
+                    >
                       Do's For Red Signal
                     </h5>
                     <p class="card-text content px-md-3">
                       <i class="fa-regular fa-circle-check"></i>
                       <span class="text-muted fw-bolder">Stop Completely:</span>
-                      Bring your vehicle to a full stop at the stop line or before the crosswalk.
+                      Bring your vehicle to a full stop at the stop line or
+                      before the crosswalk.
                     </p>
                     <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Observe Traffic Laws:</span>
-                        Follow all local traffic laws and regulations regarding red lights.
-                      </p>
-                      <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Check for Pedestrians and Other Vehicles:</span>
-                        Look for pedestrians and other vehicles that may be crossing.
-                      </p>
-                      <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Follow Right on Red Rules </span>
-                        In some places, you may turn right on red after stopping and ensuring the way is clear.
-                      </p>
-                      <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Use Turn Signals:</span>
-                        Signal your intentions if you plan to turn once the light changes. If it's right use right signal or left use left signal.
-                      </p>
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Observe Traffic Laws:</span
+                      >
+                      Follow all local traffic laws and regulations regarding
+                      red lights.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Check for Pedestrians and Other Vehicles:</span
+                      >
+                      Look for pedestrians and other vehicles that may be
+                      crossing.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder">
+                        Follow Right on Red Rules
+                      </span>
+                      In some places, you may turn right on red after stopping
+                      and ensuring the way is clear.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Use Turn Signals:</span
+                      >
+                      Signal your intentions if you plan to turn once the light
+                      changes. If it's right use right signal or left use left
+                      signal.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 my-3">
+              <div class="col-lg-6 my-2">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold">
-                    Don'ts For Red Signal
+                    <h5
+                      class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold"
+                    >
+                      Don'ts For Red Signal
                     </h5>
                     <p class="card-text content px-md-3">
                       <i class="fa-regular fa-circle-check"></i>
-                      <span class="text-muted fw-bolder">Do Not Run the Red Light:</span>
-                      Never drive through a red light; it’s illegal and dangerous.
+                      <span class="text-muted fw-bolder"
+                        >Do Not Run the Red Light:</span
+                      >
+                      Never drive through a red light; it’s illegal and
+                      dangerous.
                     </p>
                     <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Avoid Distractions: </span>
-                        Don’t use your phone or engage in other distractions while waiting.
-                      </p>
-                      <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Do Not Block Crosswalks:</span>
-                        Ensure your vehicle does not block crosswalks, allowing pedestrians to cross safely.
-                      </p>
-                      <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Don't Make Illegal Turns: </span>
-                        Don't make turns or other maneuvers that are not allowed by traffic signs or signals.
-                      </p>
-                      <p class="card-text content px-md-3">
-                        <i class="fa-regular fa-circle-check"></i>
-                        <span class="text-muted fw-bolder">Don’t Inch Forward:</span>
-                        Avoid inching forward into the intersection while waiting for the light to change.
-                      </p>
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Avoid Distractions:
+                      </span>
+                      Don’t use your phone or engage in other distractions while
+                      waiting.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Do Not Block Crosswalks:</span
+                      >
+                      Ensure your vehicle does not block crosswalks, allowing
+                      pedestrians to cross safely.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Don't Make Illegal Turns:
+                      </span>
+                      Don't make turns or other maneuvers that are not allowed
+                      by traffic signs or signals.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Don’t Inch Forward:</span
+                      >
+                      Avoid inching forward into the intersection while waiting
+                      for the light to change.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
+
+        <div class="display-cards d-none" id="yellow-signal">
+          <div class="signal-cards m-md-5 my-2 text-center">
+            <div class="card main-card">
+              <div
+                id="carouselExampleCaptions"
+                class="carousel slide carousel-fade"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img
+                      src="assests/red-signal-1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img
+                      src="assests/red-signal-2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img
+                      src="assests/red-signal-3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3 text-warning my-md-2">
+                  Yellow Signal in Traffic
+                </h5>
+                <p
+                  class="card-text card-data px-md-3 text-secondary fw-bolder fs-5"
+                >
+                  A yellow signal, often referred to as an amber or caution
+                  signal, is a part of the traffic light system that serves as a
+                  transition phase between green and red lights. Here's how it
+                  is used and what it signifies:
+                  <br />
+                </p>
+                <p class="card-text card-data px-md-3">
+                  <i class="fa-solid fa-forward"></i
+                  ><span class="text-muted fw-bolder">
+                    Warning of Change:
+                  </span>
+                  The yellow signal is a warning to drivers and pedestrians that
+                  the green light is about to change to red.
+                </p>
+                <p class="card-text card-data px-md-3">
+                  <i class="fa-solid fa-forward"></i
+                  ><span class="text-muted fw-bolder"> Prepare to Stop: </span>
+                  It prompts drivers to prepare to stop their vehicles safely,
+                  especially if they are approaching the intersection and cannot
+                  safely clear it before the light turns red.
+                </p>
+                <p class="card-text card-data px-md-3">
+                  <i class="fa-solid fa-forward"></i
+                  ><span class="text-muted fw-bolder"> Decision Point: </span>
+                  It serves as a decision point for drivers who are far from the
+                  intersection when the light changes to yellow, prompting them
+                  to decide whether to stop safely or proceed with caution if
+                  stopping suddenly is unsafe.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dos-donts-cards m-md-5">
+            <div class="row">
+              <div class="col-lg-6 my-2">
+                <div class="card">
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center text-success mt-md-2 mb-md-4 fs-md-4 fw-bold"
+                    >
+                      Do's For Yellow Signal
+                    </h5>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder">Prepare to Stop:</span>
+                      Begin to slow down and prepare to stop safely, especially
+                      if you can do so without abruptly braking.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Check Surroundings:</span
+                      >
+                      Assess the traffic and pedestrian situation around you to
+                      make a safe decision.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Proceed with Caution:</span
+                      >
+                      If you are already committed to entering the intersection
+                      and can do so safely without speeding up, proceed
+                      cautiously.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder">
+                        Use Turn Signals:
+                      </span>
+                      If you need to turn at the intersection, use your turn
+                      signals to indicate your intention.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Monitor Other Drivers:</span
+                      >
+                      Pay attention to the actions of other drivers around you
+                      who may also be responding to the yellow signal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 my-2">
+                <div class="card">
+                  <div class="card-body">
+                    <h5
+                      class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold"
+                    >
+                      Don'ts For Red Signal
+                    </h5>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder">Don't Speed Up:</span>
+                      Avoid accelerating to beat the red light. It's safer to
+                      slow down and stop if you can do so safely.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Don't Panic Brake:
+                      </span>
+                      If you're far from the intersection when the yellow light
+                      comes on, don't slam on the brakes suddenly. Instead, slow
+                      down gradually and stop if you can do so safely.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Don't Enter Last Minute:</span
+                      >
+                      If you're approaching the intersection and the light turns
+                      yellow, don't enter the intersection unless you're
+                      confident you can clear it safely.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Don't Run the Light:
+                      </span>
+                      Do not attempt to cross the intersection once the light
+                      has turned red. Always stop if it is safe to do so.
+                    </p>
+                    <p class="card-text content px-md-3">
+                      <i class="fa-regular fa-circle-check"></i>
+                      <span class="text-muted fw-bolder"
+                        >Don't Change Lanes Abruptly:</span
+                      >
+                      Avoid making sudden lane changes when approaching or
+                      passing through an intersection with a yellow light.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="display-cards d-none" id="green-signal">
+            <div class="signal-cards m-md-5 my-2 text-center">
+              <div class="card main-card">
+                <div
+                  id="carouselExampleCaptions"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img
+                        src="assests/red-signal-1.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                      <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="assests/red-signal-2.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                      <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img
+                        src="assests/red-signal-3.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                      <div class="carousel-caption d-none d-md-block"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold fs-3 text-success my-md-2">
+                    Green Signal in Traffic
+                  </h5>
+                  <p
+                    class="card-text card-data px-md-3 text-secondary fw-bolder fs-5"
+                  >
+                  A green signal in traffic lights indicates that vehicles and pedestrians are permitted to proceed through the intersection. Here's how it is used and what it signifies:
+                    <br />
+                  </p>
+                  <p class="card-text card-data px-md-3">
+                    <i class="fa-solid fa-forward"></i
+                    ><span class="text-muted fw-bolder">
+                        Go Sign:
+                    </span>
+                    The green signal is universally recognized as the signal to proceed. It indicates that vehicles and pedestrians have the right-of-way to move through the intersection.
+                  </p>
+                  <p class="card-text card-data px-md-3">
+                    <i class="fa-solid fa-forward"></i
+                    ><span class="text-muted fw-bolder"> Traffic Flow: </span>
+                    It is used to manage the flow of traffic, allowing vehicles from different directions to proceed through the intersection in an orderly manner.
+                  </p>
+                  <p class="card-text card-data px-md-3">
+                    <i class="fa-solid fa-forward"></i
+                    ><span class="text-muted fw-bolder"> Pedestrian Crossing: </span>
+                    Green signals also provide designated times for pedestrians to cross safely, usually indicated by a "Walk" signal or equivalent.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="dos-donts-cards m-md-5">
+              <div class="row">
+                <div class="col-lg-6 my-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5
+                        class="card-title text-center text-success mt-md-2 mb-md-4 fs-md-4 fw-bold"
+                      >
+                        Do's For Green Signal
+                      </h5>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder">Proceed with Caution:</span>
+                        Move through the intersection only after ensuring it is clear of pedestrians and other vehicles.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Yield to Pedestrians: </span
+                        >
+                        Yield the right-of-way to pedestrians who are crossing in designated crosswalks.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Use Turn Signals: </span
+                        >
+                        Use your turn signals to indicate your intentions if you need to change lanes or make a turn.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder">
+                          Use Turn Signals:
+                        </span>
+                        If you need to turn at the intersection, use your turn
+                        signals to indicate your intention.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Clear the Intersection: </span
+                        >
+                        Ensure that you can completely clear the intersection on the other side before stopping or proceeding.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 my-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5
+                        class="card-title text-center text-danger mt-md-2 mb-md-4 fs-md-4 fw-bold"
+                      >
+                        Don'ts For Green Signal
+                      </h5>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder">Don't Rush: </span>
+                        Avoid speeding up unnecessarily when approaching or passing through the intersection.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Don't Block Intersections: 
+                        </span>
+                        Do not enter the intersection unless you can completely clear it on the other side.
+
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Don't Use Phone:</span
+                        >
+                        Avoid using your phone or engaging in distractions that can take your attention away from driving safely.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Don't Run Yellow Lights:
+                        </span>
+                        If the light is turning yellow as you approach the intersection, do not attempt to accelerate and cross before it turns red. Instead, prepare to stop safely if you can do so.
+                      </p>
+                      <p class="card-text content px-md-3">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <span class="text-muted fw-bolder"
+                          >Don't Honk Unnecessarily:</span
+                        >
+                        Avoid unnecessary honking, especially when waiting at a green light or in traffic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
+    <script src="index.js" type="moduke"></script>
+    </script>
   </body>
 </html>

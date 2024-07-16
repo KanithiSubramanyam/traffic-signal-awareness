@@ -5,15 +5,8 @@
 }
  
 .background{
-    /* background-image: url('assests/bg-1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh; */
     background-color: aliceblue;
 }
-
-
 
 .traffic-div img{
     width: 400px;
@@ -30,6 +23,28 @@
 .card-data{
     text-align: justify;
 }
+
+
+#red-signal-button,
+#yellow-signal-button,
+#green-signal-button {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Active state shadows */
+#red-signal-button.active {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+#yellow-signal-button.active {
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
+#green-signal-button.active {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
 
 
 @media(max-width:992px){

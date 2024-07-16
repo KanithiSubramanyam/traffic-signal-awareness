@@ -25,10 +25,16 @@
 }
 
 
-#red-signal-button,
-#yellow-signal-button,
+#red-signal-button{
+    box-shadow: 0 10px 10px rgba(255, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+#yellow-signal-button{
+    box-shadow: 0 10px 10px rgba(255, 255, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
 #green-signal-button {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 255, 0, 0.15);
   transition: box-shadow 0.3s ease;
 }
 
